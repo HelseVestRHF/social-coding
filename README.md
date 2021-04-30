@@ -33,7 +33,6 @@ We need to document the changes in a project. Why some decision have been made a
 ![Contributions as social media posts](images/social_media.jpg)
 
 But there are other benefits:
-
  - social media profile relevant for future employers
  - ability to talk to your future self
  - test a new feature safely and remove all its traces - in case it was not a good idea
@@ -42,3 +41,16 @@ But there are other benefits:
  - free and open-source software and a large community
 
 Yes, and also to work together with other people on larger projects.
+
+## History of a document and how it maps to git
+
+As today becomes history, what do we want to remember? Here an example where we store our work when:
+ - we start
+ - we have our first prototype
+ - we remember to check for is.na()
+ - we forgot to add the library so this will work for other people testing it
+ - we document what we did.
+
+![Editing a document](images/intro-stat.gif)
+
+![Creating memory points](images/progress.gif)
