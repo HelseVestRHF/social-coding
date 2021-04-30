@@ -58,3 +58,19 @@ As today becomes history, what do we want to remember? Here an example where we 
 <span>&nbsp;</span>
 
 In this example "main" is the name of the branch in the repository that we do work in currently. Its position is linked to the location of the latest change - the *HEAD* of our repository. Adding a memory point, a *commit* will store the status of the file and provide a numeric code for that point, the *commit-id*.
+
+## A commit - the basic unit of git
+
+You *commit* a collection of added or removed lines that belong to a single feature/fix or decision in the project. A commit can be referenced by its *commit-id*, also called its *SHA-1* ('SCHAH-ONE'). The commit is special in git its created
+ - based on the author information
+ - date of the commit
+ - all text in the repository when the commit is created
+ - and a log-message
+
+This process makes the commit-id unique in a project. Comparing two last commit-id's is sufficient to decide if two folders show the same information. This is one of the reasons that git is so much faster compared to other version control systems.
+
+![Process of incremental development](images/repo-commit.gif)
+
+A usual process in a project is to commit some changes which informs a code reviewer-person. If everything is ok the process ends, but if there is a problem with the latest change the reviewer will file an *issue*. The owner can respond to the issue by changing the code which creates a new commit. This process is repeated during the life-cycle of the project.
+
+
