@@ -109,3 +109,17 @@ Create a new repository in a directory "project" with *git init*
 
 ![Create a new repo](images/git-init.gif)
 
+Behind the scenes a *git init* will create a new directory called ```.git/```. There are no other changes to your computer. If you remove the directory again you have un-done git init. The folder name has a preceding dot-character. Most operating systems interpret this as a _hidden_ folder. You might not be able to list it but you can enter it to inspect its content if you are curious.
+
+![Content of .git/](images/git-init-directories.gif)
+
+Of some interest is the content of the _config_ file. It stores options of git as well as links to other repositories like the repository home in the cloud (*remote*). Here an example of the content of _config_ for a local repository:
+```
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+```
