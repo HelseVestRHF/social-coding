@@ -67,10 +67,17 @@ You *commit* a collection of added or removed lines that belong to a single feat
  - all text in the repository when the commit is created
  - and a log-message
 
-This process makes the commit-id unique in a project. Comparing two last commit-id's is sufficient to decide if two folders show the same information. This is one of the reasons that git is so much faster compared to other version control systems.
+It is important to provide a good log-message as this will be the only way for your future self (or other people) to find out what the intent of your changes was. A good git log message has the following format:
+```
+Add filter for na
+
+It is necessary to filter out rows with na before creating table 1.
+```
+In the above example a title line with less than 50 characters is followed by an empty line followed by a description with less than 72 characters. A good idea is to apply the Washington Post test to this message - would you be embarrassed if that message shows up printed in the newspaper? If you are you should probably change it.
+
+This way in which the commit-id is created makes it unique in a project. Comparing two commit-id's is sufficient to decide if two folders show the same information. This is one of the reasons that git is so much faster compared to other version control systems and therefore suitable for large projects.
 
 ![Process of incremental development](images/repo-commit.gif)
 
 A usual process in a project is to commit some changes which informs a code reviewer-person. If everything is ok the process ends, but if there is a problem with the latest change the reviewer will file an *issue*. The owner can respond to the issue by changing the code which creates a new commit. This process is repeated during the life-cycle of the project.
-
 
