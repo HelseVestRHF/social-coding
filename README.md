@@ -123,3 +123,10 @@ Of some interest is the content of the _config_ file. It stores options of git a
 	ignorecase = true
 	precomposeunicode = true
 ```
+
+## The very first commit
+
+In order to commit changes you first add the files. Afterwards to *commit*. In the next iteration of your code changes you *add* again and *commit* again. These two operations repeat during development.
+
+![Add/commit](images/git-commit-first.gif)
+
