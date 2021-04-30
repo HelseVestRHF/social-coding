@@ -51,9 +51,10 @@ As today becomes history, what do we want to remember? Here an example where we 
  - we forgot to add the library so this will work for other people testing it
  - we document what we did.
 
-<div>
+
 <img src="https://github.com/HelseVestRHF/social-coding/blob/main/images/intro-stat.gif?raw=true" width=400 align=left>
-<img src="https://github.com/HelseVestRHF/social-coding/blob/main/images/progress.gif?raw=true" width=300 align=right>
-</div>
+<img src="https://github.com/HelseVestRHF/social-coding/blob/main/images/progress.gif?raw=true" width=200 align=right>
+
+<span>&nbsp;</span>
 
 In the example above "main" is the name of the branch in the repository that we do work in currently. Its position is linked to the location of the latest change - the *HEAD* of our repository.
