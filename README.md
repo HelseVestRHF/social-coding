@@ -179,6 +179,14 @@ After a final *git push origin master* also Alices changes will be visible in th
 
 If both Alice and Bob edit different documents or different lines of the same document there is no problem and git will handle all the merge operations automatically. The efficiency with which git is handling this part is the major reason that git is used everywhere instead of other version control software.
 
-If Alice and Bob edit the same line in a document the merge attempt of git will end with a *merge conflict*. If Bob was first submitting his changes the merge conflict will only happen on Alices computer. Her changes would have to be integrated with Bob's. Let say both change the title line in the README.md. git cannot know who should have the final say. Alice is asked in this case to manually merge. The software will inform 
+If Alice and Bob edit the same line in a document the merge attempt of git will end with a *merge conflict*. If Bob was first submitting his changes the merge conflict will only happen on Alices computer. Her changes would have to be integrated with Bob's. Let say both change the title line in the README.md. git cannot know who should have the final say. Alice is asked in this case to manually merge.
 
 ![merge conflict](images/merge-conflict.jpg)
+
+Git will add the information from Bob to the document that caused the merge conflict (README.md). It will list his changes and Alices changes using some special lines with enclosed in "<<<..." and ">>>>...". Alice is resolving the conflict by reviewing each section and deciding which of the two options should be selected. Alice can not just select one of the options but can _merge_ them together (team player). Once all the merge conflice section in the document are resolved (no more "<<< ... >>>") Alice can finish the merge resolve with:
+```
+git add README.md
+git commit
+git push
+```
+
