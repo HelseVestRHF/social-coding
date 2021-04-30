@@ -190,3 +190,8 @@ git commit
 git push
 ```
 
+Merge conflicts are rare but they do happen. Effective communication between team members can reduce conflicts. For such purposes additional bug tracking and issue tracking software should be used. Such systems integrate with git by reading git's log-messages. An issue will be assigned a number like '1'. If a commit fixes the issue the log-message starts with:
+```
+fix #1: add is.na
+```
+The integrated git and issue tracking system will know to *close* the issue which informs the user that created the issue that everything is well again.
