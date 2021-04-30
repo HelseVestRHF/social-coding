@@ -126,7 +126,20 @@ Of some interest is the content of the _config_ file. It stores options of git a
 
 ## The very first commit
 
-In order to commit changes you first add the files. Afterwards to *commit*. In the next iteration of your code changes you *add* again and *commit* again. These two operations repeat during development.
+In order to commit changes you first add the files. Afterwards to *commit*. In the next iteration of your code changes you *add* again and *commit* again. These two operations repeat throughout development.
 
 ![Add/commit](images/git-commit-first.gif)
 
+The very first time you try to commit the software will ask you who you are because git commits contain the author information. This includes the name and the email of the author. Provide that information as:
+```
+git config --global user.name "Hauke Bartsch"
+git config --global user.email "HB@gm.com"
+```
+
+After specifying the author information your commit will ask you for the commit message
+
+![Commit message example](images/write-commit-message.gif)
+
+The commit is now stored locally in the .git/ directory. You can verify this by using printing the *git log*.
+
+![git log](images/log-message.gif)
