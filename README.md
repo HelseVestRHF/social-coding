@@ -57,4 +57,4 @@ As today becomes history, what do we want to remember? Here an example where we 
 
 <span>&nbsp;</span>
 
-In the example above "main" is the name of the branch in the repository that we do work in currently. Its position is linked to the location of the latest change - the *HEAD* of our repository.
+In this example "main" is the name of the branch in the repository that we do work in currently. Its position is linked to the location of the latest change - the *HEAD* of our repository. Adding a memory point, a *commit* will store the status of the file and provide a numeric code for that point, the *commit-id*.
