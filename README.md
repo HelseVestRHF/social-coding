@@ -12,7 +12,7 @@ A modern text editor focuses on content over form and provides features that mak
 
 Text editors are specialized tools that are different from word processors. Many are free or open source. Images on this page are created using the text editor Visual Studio Code.
 
-![Text files](images/test_files.jpg)
+![Text files](images/text_files.jpg)
 
 Text files may share content, or represent the same document changed over time. Each time we can identify lines that are the same or lines that are different.
 
