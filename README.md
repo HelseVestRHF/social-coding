@@ -83,7 +83,7 @@ A usual process in a project is to commit some changes which informs a code revi
 
 ## Branches
 
-Git development is mainly done in the default branch called *main*. In some cases it might make sense to create a temporary second branch. All future commits after you *checkout* such a branch would be assigned to that branch. At a later point you can decide to *checkout* the *main* branch again or to *merge* the changes in the second branch back into the *main* branch.
+Git development is mainly done in the default branch called *main*. In some cases it might make sense to create a temporary second branch. All future commits after you *checkout* such a branch would be assigned to that branch. At a later point you can decide to *checkout* the *main* branch again or to *merge* the changes in the second branch back into the *main* branch. A branch is created using the *checkout -b* command.
 
 ## Terminology
 
@@ -96,8 +96,16 @@ Git development is mainly done in the default branch called *main*. In some case
 
 ## Examples for git operations
 
+You can interface with the git software on the command line. All git commands are structured as
+```
+git <command> [options...]
+```
+
 As for all data from a shared repository with ```git clone <address>```.
 
 ![Clone a repo](images/git-clone.gif)
 
+Create a new repository in a directory "project" with *git init*
+
+![Create a new repo](images/git-init.gif)
 
