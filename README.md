@@ -81,3 +81,23 @@ This way in which the commit-id is created makes it unique in a project. Compari
 
 A usual process in a project is to commit some changes which informs a code reviewer-person. If everything is ok the process ends, but if there is a problem with the latest change the reviewer will file an *issue*. The owner can respond to the issue by changing the code which creates a new commit. This process is repeated during the life-cycle of the project.
 
+## Branches
+
+Git development is mainly done in the default branch called *main*. In some cases it might make sense to create a temporary second branch. All future commits after you *checkout* such a branch would be assigned to that branch. At a later point you can decide to *checkout* the *main* branch again or to *merge* the changes in the second branch back into the *main* branch.
+
+## Terminology
+
+ - *repo* - A repository is a (hidden) directory called .git/ with all the files related to your work and their history
+ - *main* - The position of the *HEAD* of your repository branch named main. This position reflects a specific commit relative to the last. In git you can specificy *HEAD~2* to mean *the commit two commits back from the current HEAD*. This way you move around in your commit history.
+ - *commit-id* - A commit-id or SHA-1 is created from the tex, the date, the author committing, the log message, and the previous commit-id.
+ - GitHUB - A company that provides a hosting service for git repositories. Other providers are GitLab, Bitbucket and SourceForge.
+ - *clone* - Cloning a repository is a process that creates a copy of all the files of a repo on your disc.
+ - *branch* - A branch is a different version of your repository usually for a different purpose such as a development branch, or a feature branch. There is always one default branch called *main*.
+
+## Examples for git operations
+
+As for all data from a shared repository with ```git clone <address>```.
+
+![Clone a repo](images/git-clone.gif)
+
+
