@@ -143,3 +143,42 @@ After specifying the author information your commit will ask you for the commit 
 The commit is now stored locally in the .git/ directory. You can verify this by using printing the *git log*.
 
 ![git log](images/log-message.gif)
+
+## Project development in a team
+
+It is easy to collaborate with git. All project partners *clone* their own copy of the shared repository when they start working. As all development (git add, git commit) is local there are no changes to the workflow above. At some point each project partner can decide to *push* his/her commits to the shared repository.
+
+Here an example. We have two users "Alice" and "Bob". Both have cloned the same repository that is shared on github.com. As this is a ficticious example you need to replace the repository address with your own repository.
+
+Both Alice and Bob change the same README.md file, "git add" the file and "git commit" their changes.
+
+![git log](images/collaborative.gif)
+
+All information is still local on the computers of Alice and Bob. If both of them decide to share their work they call:
+```
+git push origin main
+```
+
+In the above command *origin* references a section in the .git/config file that is created when a repository is cloned from a remote source:
+```
+[remote "origin"]
+        url = https://github.com/HaukeBartsch/vessel_network.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+```
+*main* is of course the name of the branch that Alice and Bob want to synchronize with github.
+
+The above workflow will work for the first person that runs "git push origin main" and update the history of the project on the shared repository. For the second person - lets say Alice there will be an error message asking Alice to first *pull* from the shared repository before being able to *push* her changes.
+
+![pull before push](images/pull_before_push.jpg)
+
+This ensures that the changes of Alice will be *merged* with the already existing changes of Bob. Therefore there are two operations that are performed on Alice's computer on a *git pull*. The first is a *git fetch* that updates the information in Alices .git/ directory and a *git merge* that merges her locally commited changes with the new commits from Bob.
+
+After a final *git push origin master* also Alices changes will be visible in the shared repository.
+
+## What can go wrong?
+
+If both Alice and Bob edit different documents or different lines of the same document there is no problem and git will handle all the merge operations automatically. The efficiency with which git is handling this part is the major reason that git is used everywhere instead of other version control software.
+
+If Alice and Bob edit the same line in a document the merge attempt of git will end with a *merge conflict*. If Bob was first submitting his changes the merge conflict will only happen on Alices computer. Her changes would have to be integrated with Bob's. Let say both change the title line in the README.md. git cannot know who should have the final say. Alice is asked in this case to manually merge. The software will inform 
+
+![merge conflict](images/merge-conflict.jpg)
